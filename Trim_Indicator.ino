@@ -53,7 +53,7 @@ void setup()
 
 
 // check if calibration is initiated
-// calibration starts when the the unit is powered while Up or Down button is pressed
+// calibration starts when the pins connected to A3 are shorted (A3 is grounded)
 // calibration required to set Zero Trim point (Trim for takeoff)
 // it might not be neceseraly in the midle of the trim servo position
    if (digitalRead(A3) == LOW) {
