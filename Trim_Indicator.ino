@@ -157,13 +157,13 @@ void loop() {
 
 void FlashRedLeds () {
   currentMillis = millis();
-  if (TrimDown > 0) {
+  if (TrimDown > 50) {      // lift the sensitivity well above noise floor to avoid false indication of trim motor activation
     if (currentMillis - LedTimer > 200) {
       digitalWrite(11, !digitalRead(11));
       LedTimer = currentMillis;
     }
   }
-  if (TrimUp > 0) {
+  if (TrimUp > 50) {        // lift the sensitivity well above noise floor to avoid false indication of trim motor activation
     if (currentMillis - LedTimer > 200) {
       digitalWrite(3, !digitalRead(3));
       LedTimer = currentMillis;
